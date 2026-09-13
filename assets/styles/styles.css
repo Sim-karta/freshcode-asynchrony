@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: #333333;
+    color: #fafafa;
+    padding: 2rem;
+}
+
+.button {
+    color: #fafafa;
+    background-color: #353535;
+    border: 1px solid #6d001a;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #303030;
+    padding: 2rem;
+    border: 1px solid #6d001a;
+    border-radius: 1rem;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #303030;
+    padding: 2rem;
+    border: 1px solid #6d001a;
+    border-radius: 1rem;
+}
+
+.dog-img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
