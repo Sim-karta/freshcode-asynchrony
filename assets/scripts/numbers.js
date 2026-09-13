@@ -1,5 +1,8 @@
-/*
-function printNumbers(from, to, interval) {
+const timerElement = document.querySelector(".timer");
+const timerIntervalBtnElement = timerElement.querySelector(".timer-interval");
+const timerTimeoutBtnElement = timerElement.querySelector(".timer-timeout");
+
+function printNumbersInterval(from, to, interval) {
     let i = from;
     console.log(i++);
 
@@ -12,16 +15,19 @@ function printNumbers(from, to, interval) {
     }, interval);
 }
 
-printNumbers(5, 10, 1000);
-*/
-
-function printNumbers(from, to, interval) {
+function printNumbersTimeout(from, to, interval) {
     console.log(from++);
     setTimeout(() => {
         if (from <= to) {
-            printNumbers(from, to, interval);
+            printNumbersTimeout(from, to, interval);
         }
     }, interval);
 }
 
-printNumbers(5, 10, 1000);
+timerIntervalBtnElement.addEventListener("click", () => {
+    printNumbersInterval(5, 10, 1000);
+});
+
+timerTimeoutBtnElement.addEventListener("click", () => {
+    printNumbersTimeout(5, 10, 1000);
+});
