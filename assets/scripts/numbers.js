@@ -1,3 +1,4 @@
+/*
 function printNumbers(from, to, interval) {
     let i = from;
     console.log(i++);
@@ -8,6 +9,18 @@ function printNumbers(from, to, interval) {
         }
 
         console.log(i++);
+    }, interval);
+}
+
+printNumbers(5, 10, 1000);
+*/
+
+function printNumbers(from, to, interval) {
+    console.log(from++);
+    setTimeout(() => {
+        if (from <= to) {
+            printNumbers(from, to, interval);
+        }
     }, interval);
 }
 
